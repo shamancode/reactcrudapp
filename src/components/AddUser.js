@@ -1,6 +1,7 @@
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { Link, useHistory } from "react-router-dom";
 import React, { useState, useContext } from "react";
+import { v4 as uuid } from "uuid";
 
 import { GlobalContext } from "../context/GlobalState";
 
@@ -11,8 +12,8 @@ export const AddUser = () => {
 
   const onSubmit = () => {
     const newUser = {
-      id: 4,
-      name: "User Four",
+      id: uuid(),
+      name,
     };
     addUser(newUser);
     history.push("/");
