@@ -9,7 +9,6 @@ import { Home } from "./components/Home";
 import React from "react";
 
 function App() {
-  // Add testing comment
   return (
     <div style={{ maxWidth: "30rem", margin: "4rem auto" }}>
       <GlobalProvider>
