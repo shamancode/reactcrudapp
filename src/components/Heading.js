@@ -7,11 +7,11 @@ export const Heading = () => {
   return (
     <Navbar color="dark" dark>
       <Container>
-        <NavbarBrand href="/">My Team</NavbarBrand>
+        <NavbarBrand href="/">My Tasks</NavbarBrand>
         <Nav>
           <NavItem>
-            <Link className="btn btn-primary" to="/add">
-              Add User
+            <Link className="btn btn-success" to="/add">
+              Add Task
             </Link>
           </NavItem>
         </Nav>

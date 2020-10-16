@@ -9,19 +9,25 @@ export const UserList = () => {
   console.log(users);
   return (
     <ListGroup className="mt-4">
-      {users.map((user) => (
-        <ListGroupItem className="d-flex">
-          <strong>{user.name}</strong>
-          <div className="ml-auto">
-            <Link className="btn btn-warning mr-1" to={`/edit/${user.id}`}>
-              Edit
-            </Link>
-            <Button onClick={() => removeUser(user.id)} color="danger">
-              Delete
-            </Button>
-          </div>
-        </ListGroupItem>
-      ))}
+      {users.length > 0 ? (
+        <>
+          {users.map((user) => (
+            <ListGroupItem className="d-flex">
+              <strong>{user.name}</strong>
+              <div className="ml-auto">
+                <Link className="btn btn-warning mr-1" to={`/edit/${user.id}`}>
+                  Edit
+                </Link>
+                <Button onClick={() => removeUser(user.id)} color="danger">
+                  Delete
+                </Button>
+              </div>
+            </ListGroupItem>
+          ))}
+        </>
+      ) : (
+        <h4 className="text-center">No Tasks Yet</h4>
+      )}
     </ListGroup>
   );
 };

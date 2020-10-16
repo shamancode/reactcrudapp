@@ -2,7 +2,6 @@ import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import { Link, useHistory } from "react-router-dom";
 import React, { useState, useContext } from "react";
 import { v4 as uuid } from "uuid";
-
 import { GlobalContext } from "../context/GlobalState";
 
 export const AddUser = () => {
@@ -26,15 +25,17 @@ export const AddUser = () => {
   return (
     <Form onSubmit={onSubmit}>
       <FormGroup>
-        <Label>Name</Label>
+        <Label>Task</Label>
         <Input
           type="text"
           value={name}
           onChange={onChange}
-          placeholder="Enter Name"
+          placeholder="Enter Task"
         ></Input>
       </FormGroup>
-      <Button type="submit">Submit</Button>
+      <Button type="submit" className="btn btn-success">
+        Submit
+      </Button>
       <Link to="/" className="btn btn-danger ml-2">
         Cancel
       </Link>
